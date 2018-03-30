@@ -6,8 +6,10 @@ body {
 	font-family: "Roboto", sans-serif;
 }
 
-h2 {
-	color: #36ff36;
+.card-header {
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 ::selection {

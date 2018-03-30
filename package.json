@@ -47,7 +47,8 @@
 	"dependencies": {
 		"prop-types": "^15.6.0",
 		"react": "^16.2.0",
-		"react-dom": "^16.2.0"
+		"react-dom": "^16.2.0",
+		"source-map-loader": "^0.2.3"
 	},
 	"bugs": {
 		"url": "https://github.com/tomasz-konecki/Solution/issues"

@@ -4,11 +4,28 @@
 body {
 	background: #222;
 	font-family: "Roboto", sans-serif;
+	color: #adf;
 }
 
-.card-header {
-	&:hover {
-		cursor: pointer;
+.box-1,
+.box-2 {
+	margin-top: 10px;
+}
+
+.box-1 {
+	border: 2px solid skyblue;
+}
+
+.box-2 {
+	border: 2px solid red;
+	h2 {
+		color: red;
+	}
+}
+
+.row {
+	.col {
+		border: 1px solid yellowgreen;
 	}
 }
 

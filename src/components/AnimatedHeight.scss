@@ -1,0 +1,23 @@
+.mango {
+	height: 50px;
+	width: 500px;
+	overflow: hidden;
+	display: inline-block;
+	background-color: tomato;
+	transition: height 1s;
+}
+
+.extended {
+	height: 200px;
+}
+
+.icon {
+	display: inline;
+	font-size: 2em;
+	transform: rotate(45deg);
+
+	color: cyan;
+	&:hover {
+		cursor: pointer;
+	}
+}

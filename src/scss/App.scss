@@ -1,36 +1,35 @@
 // @import "3rd/Reset.scss";
-// @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
-
-@import url('/font-awesome-4.6.3/css/font-awesome.min.css');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://use.fontawesome.com/releases/v5.0.6/css/all.css");
 
 body {
-	background: #222;
-	font-family: "Roboto", sans-serif;
-	color: #adf;
+  background: #222;
+  font-family: "Roboto", sans-serif;
+  color: #adf;
 }
 
 .box-1,
 .box-2 {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
 .box-1 {
-	border: 2px solid skyblue;
+  border: 2px solid skyblue;
 }
 
 .box-2 {
-	border: 2px solid red;
-	h2 {
-		color: red;
-	}
+  border: 2px solid red;
+  h2 {
+    color: red;
+  }
 }
 
 .row {
-	.col {
-		border: 1px solid yellowgreen;
-	}
+  .col {
+    border: 1px solid yellowgreen;
+  }
 }
 
 ::selection {
-	background: #ffb97c; /* WebKit/Blink Browsers */
+  background: #ffb97c; /* WebKit/Blink Browsers */
 }

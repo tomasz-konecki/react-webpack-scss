@@ -1,25 +1,24 @@
 import React, { Component } from "react";
-import "./AnimatedHeight.scss";
 
-class AnimatedHeight extends Component {
-  state = {
-    rectangleClass: "",
-    iconDirection: "right"
-  };
+class BootCollapse extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      iconDirection: "right"
+    };
+  }
 
-  handleClick = () => {
-    let rectangleClass =
-      this.state.rectangleClass === "extended" ? "" : "extended";
+  handleClick = param => e => {
+    console.log("Parameter", param);
+    console.log("Event", e);
     let iconDirection = this.state.iconDirection === "right" ? "down" : "right";
     this.setState({
-      rectangleClass,
       iconDirection
     });
   };
 
   render() {
     let direction = this.state.iconDirection;
-    let rectangleClass = this.state.rectangleClass;
     return (
       <div className="container">
         <table>
@@ -31,13 +30,12 @@ class AnimatedHeight extends Component {
           <tbody>
             <tr>
               <td className="icon">
-                <i
-                  className={`fas fa-angle-${direction}`}
-                  onClick={this.handleClick}
-                />
+                <div onClick={this.handleClick("param")} id="111">
+                  <i className={`fas fa-angle-${direction}`} />
+                </div>
               </td>
               <td>
-                <div className={["rectangle", rectangleClass].join(" ")}>
+                <div className="rectangle">
                   <p>
                     Proident irure cillum consequat magna nulla irure aliqua
                     minim sit. Ex aute magna in minim excepteur labore aliqua
@@ -59,7 +57,7 @@ class AnimatedHeight extends Component {
                 />
               </td>
               <td>
-                <div className={["rectangle", rectangleClass].join(" ")}>
+                <div className="rectangle">
                   <p>
                     Proident irure cillum consequat magna nulla irure aliqua
                     minim sit. Ex aute magna in minim excepteur labore aliqua
@@ -80,4 +78,4 @@ class AnimatedHeight extends Component {
   }
 }
 
-export default AnimatedHeight;
+export default BootCollapse;

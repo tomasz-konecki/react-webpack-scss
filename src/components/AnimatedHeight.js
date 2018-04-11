@@ -19,6 +19,7 @@ class AnimatedHeight extends Component {
 
   render() {
     let direction = this.state.iconDirection;
+    let rectangleClass = this.state.rectangleClass;
     return (
       <div className="container">
         <table>
@@ -32,9 +33,7 @@ class AnimatedHeight extends Component {
                 />
               </td>
               <td>
-                <div
-                  className={["rectangle", this.state.rectangleClass].join(" ")}
-                >
+                <div className={["rectangle", rectangleClass].join(" ")}>
                   <p>
                     Proident irure cillum consequat magna nulla irure aliqua
                     minim sit. Ex aute magna in minim excepteur labore aliqua
@@ -56,9 +55,7 @@ class AnimatedHeight extends Component {
                 />
               </td>
               <td>
-                <div
-                  className={["rectangle", this.state.rectangleClass].join(" ")}
-                >
+                <div className={["rectangle", rectangleClass].join(" ")}>
                   <p>
                     Proident irure cillum consequat magna nulla irure aliqua
                     minim sit. Ex aute magna in minim excepteur labore aliqua

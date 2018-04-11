@@ -12,11 +12,13 @@
 }
 
 .icon {
-  display: inline;
+  // display: inline;
+  // transform: rotate(90deg);
   font-size: 2em;
-  transform: rotate(45deg);
-
+  height: 100%;
   color: cyan;
+  vertical-align: top;
+
   &:hover {
     cursor: pointer;
   }

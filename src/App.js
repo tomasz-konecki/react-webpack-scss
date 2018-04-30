@@ -1,10 +1,10 @@
 import React from "react";
 import "./scss/App.scss";
-import BootTest from "./components/BootTest";
+import Test from "./components/Test";
 
 const App = () => (
 	<div>
-		<BootTest />
+		<Test />
 	</div>
 );
 

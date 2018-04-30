@@ -4,7 +4,6 @@
 	"description": "solution template",
 	"main": "index.js",
 	"scripts": {
-		"prestart": "babel-node tools/startMessage.js",
 		"start": "npm-run-all --parallel webpack lint:watch",
 		"lint": "node_modules/.bin/esw webpack.config.* src tools",
 		"lint:watch": "npm run lint -- --watch",

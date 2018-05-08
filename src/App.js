@@ -15,9 +15,18 @@ class App extends Component {
 
     this.state = {
       people,
-      term: ""
+      term: "",
+      description: false
     };
   }
+
+  setFlag = value => {
+    console.log(value);
+    let flag = this.state.description;
+    this.setState({
+      description: flag ? false : true
+    });
+  };
 
   searchingFor = term => x =>
     x.first.toLowerCase().includes(term.toLowerCase()) ||
@@ -30,18 +39,21 @@ class App extends Component {
   };
 
   render() {
-    const { term, people } = this.state;
+    const { term, people, description } = this.state;
     return (
       <div className="App">
         <input type="text" onChange={this.searchHandler} />
 
         {people.filter(this.searchingFor(term)).map(person => (
-          <div key={person.id}>
-            <div className="person">
-              <h6>{person.first}</h6>
-              <h6>{person.last}</h6>
-              <h6>{person.age}</h6>
-            </div>
+          <div
+            className="person"
+            key={person.id}
+            onClick={() => this.setFlag(person.id)}
+          >
+            <h6>{person.first}</h6>
+            <h6>{person.last}</h6>
+            <h6>{person.age}</h6>
+            {description && <p className="description">Lorem ipsum</p>}
           </div>
         ))}
       </div>

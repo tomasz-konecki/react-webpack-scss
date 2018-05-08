@@ -22,6 +22,12 @@ const people = [
     last: "Renton",
     age: 50,
     id: 4
+  },
+  {
+    first: "John",
+    last: "Cleese",
+    age: 80,
+    id: 5
   }
 ];
 

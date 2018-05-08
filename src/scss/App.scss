@@ -8,9 +8,18 @@ body {
 
   .App {
     padding: 15px;
+
+    input {
+      background: lightgray;
+      margin-bottom: 15px;
+      &:focus {
+        background: white;
+      }
+    }
+
     .person {
       h6 {
-        display: inline-block;
+        display: inline;
       }
       h6:first-of-type {
         margin-right: 5px;
@@ -22,6 +31,9 @@ body {
           font-size: 12px;
           padding: 0 5px;
         }
+      }
+      h6:nth-of-type(3) {
+        font-size: 13px;
       }
     }
   }

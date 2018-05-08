@@ -3,11 +3,11 @@ import "./scss/App.scss";
 // import Filter from "./components/Filter";
 import people from "./data/people";
 
-function searchingFor(term) {
-  return function(x) {
-    return x.first.toLowerCase().includes(term.toLowerCase()) || !term;
-  };
-}
+// function searchingFor(term) {
+//   return function(x) {
+//     return x.first.toLowerCase().includes(term.toLowerCase()) || !term;
+//   };
+// }
 
 class App extends Component {
   constructor(props) {
@@ -19,6 +19,10 @@ class App extends Component {
     };
   }
 
+  searchingFor = term => x =>
+    x.first.toLowerCase().includes(term.toLowerCase()) ||
+    x.last.toLowerCase().includes(term.toLowerCase());
+
   searchHandler = e => {
     this.setState({
       term: e.target.value
@@ -27,13 +31,11 @@ class App extends Component {
 
   render() {
     const { term, people } = this.state;
-    console.log(term);
     return (
       <div className="App">
-        <form>
-          <input type="text" onChange={this.searchHandler} />
-        </form>
-        {people.filter(searchingFor(term)).map(person => (
+        <input type="text" onChange={this.searchHandler} />
+
+        {people.filter(this.searchingFor(term)).map(person => (
           <div key={person.id}>
             <div className="person">
               <h6>{person.first}</h6>
